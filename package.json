@@ -1,0 +1,37 @@
+{
+  "name": "@protectyr-labs/casl-consent",
+  "version": "1.0.0",
+  "description": "CASL-compliant email consent management. Express/implied consent, 2-year expiry, unsubscribe cascade, compliant footers.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "casl",
+    "consent",
+    "email",
+    "compliance",
+    "canada",
+    "anti-spam",
+    "marketing",
+    "unsubscribe",
+    "rfc8058"
+  ],
+  "author": "Protectyr Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/protectyr-labs/casl-consent.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}
