@@ -50,6 +50,14 @@ The 2-year expiry is Canadian law, not a design choice. After expiry, you must o
 - **Upgrade path** -- `upgradeToExpress()` converts implied consent to indefinite
 - **Zero dependencies** -- pure functions returning plain objects
 
+## Use Cases
+
+**Canadian SaaS companies** -- If you send commercial emails to Canadian recipients, CASL applies. This handles the consent tracking requirements.
+
+**Email marketing platforms** -- Track express vs implied consent per subscriber. Auto-expire implied consent after 2 years. Generate compliant footers.
+
+**CRM systems** -- When a business relationship is established (purchase, inquiry), record implied consent with automatic expiry. Upgrade to express when they explicitly opt in.
+
 ## API
 
 | Function | Purpose |
