@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="expressGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="impliedGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="expiredGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="timelineTrack" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="220" fill="url(#bg)" rx="6"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#94a3b8" stroke-width="0.5">
+    <line x1="0" y1="55" x2="1200" y2="55"/>
+    <line x1="0" y1="110" x2="1200" y2="110"/>
+    <line x1="0" y1="165" x2="1200" y2="165"/>
+    <line x1="240" y1="0" x2="240" y2="220"/>
+    <line x1="480" y1="0" x2="480" y2="220"/>
+    <line x1="720" y1="0" x2="720" y2="220"/>
+    <line x1="960" y1="0" x2="960" y2="220"/>
+  </g>
+
+  <!-- LEFT SIDE: Title and metadata -->
+  <text x="48" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#e2e8f0" letter-spacing="-0.5">casl-consent</text>
+  <text x="48" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8">CASL-compliant email consent management</text>
+
+  <!-- Status pill -->
+  <rect x="48" y="118" width="82" height="22" rx="11" fill="#34d399" opacity="0.15"/>
+  <text x="89" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#34d399" text-anchor="middle" font-weight="600">production</text>
+
+  <!-- Zero deps pill -->
+  <rect x="140" y="118" width="72" height="22" rx="11" fill="#60a5fa" opacity="0.15"/>
+  <text x="176" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="600">zero deps</text>
+
+  <!-- Key stat -->
+  <text x="48" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#64748b">Express consent  |  Implied 2-year expiry  |  RFC 8058 headers</text>
+
+  <!-- Divider line -->
+  <line x1="490" y1="30" x2="490" y2="190" stroke="#334155" stroke-width="1" opacity="0.6"/>
+
+  <!-- RIGHT SIDE: Consent lifecycle visualization -->
+
+  <!-- Section label -->
+  <text x="530" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b" letter-spacing="1.5" font-weight="600">CONSENT LIFECYCLE</text>
+
+  <!-- Timeline track -->
+  <rect x="530" y="104" width="630" height="3" rx="1.5" fill="url(#timelineTrack)"/>
+
+  <!-- NODE 1: Express consent (green) -->
+  <g transform="translate(570, 65)">
+    <rect x="-30" y="-12" width="106" height="48" rx="6" fill="url(#expressGrad)" opacity="0.15" stroke="#34d399" stroke-width="1" opacity="0.4"/>
+    <circle cx="-30" cy="40" r="5" fill="#34d399"/>
+    <text x="23" y="5" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#34d399" text-anchor="middle" font-weight="600">EXPRESS</text>
+    <text x="23" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">indefinite</text>
+    <!-- Infinite arrow -->
+    <line x1="76" y1="12" x2="112" y2="12" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+    <text x="96" y="5" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#34d399" text-anchor="middle" opacity="0.6">&#x221E;</text>
+  </g>
+
+  <!-- NODE 2: Implied consent (blue) with clock -->
+  <g transform="translate(740, 65)">
+    <rect x="-30" y="-12" width="106" height="48" rx="6" fill="url(#impliedGrad)" opacity="0.15" stroke="#60a5fa" stroke-width="1" opacity="0.4"/>
+    <circle cx="-30" cy="40" r="5" fill="#60a5fa"/>
+    <text x="23" y="5" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle" font-weight="600">IMPLIED</text>
+    <text x="23" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">S.10(2)</text>
+    <!-- 2-year clock icon -->
+    <circle cx="94" cy="12" r="14" fill="none" stroke="#60a5fa" stroke-width="1.2" opacity="0.5"/>
+    <line x1="94" y1="12" x2="94" y2="4" stroke="#60a5fa" stroke-width="1.5" opacity="0.7"/>
+    <line x1="94" y1="12" x2="100" y2="14" stroke="#60a5fa" stroke-width="1.2" opacity="0.7"/>
+    <text x="94" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle" opacity="0.7">2 yrs</text>
+  </g>
+
+  <!-- Arrow from implied to expiry -->
+  <line x1="850" y1="106" x2="890" y2="106" stroke="#475569" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <defs>
+    <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#475569"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <!-- NODE 3: Expiry (muted) -->
+  <g transform="translate(910, 65)">
+    <rect x="-30" y="-12" width="86" height="48" rx="6" fill="url(#expiredGrad)" opacity="0.12" stroke="#64748b" stroke-width="1" opacity="0.3"/>
+    <circle cx="-30" cy="40" r="5" fill="#64748b"/>
+    <text x="13" y="5" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle" font-weight="600">EXPIRED</text>
+    <text x="13" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b" text-anchor="middle" opacity="0.7">blocked</text>
+  </g>
+
+  <!-- Upgrade arrow (implied -> express, curved upward) -->
+  <path d="M 780,65 Q 780,48 700,48 Q 620,48 620,65" fill="none" stroke="#34d399" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.5" marker-end="url(#arrowGreen)"/>
+  <text x="700" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#34d399" text-anchor="middle" opacity="0.6">upgrade</text>
+
+  <!-- Unsubscribe cascade (bottom row) -->
+  <g transform="translate(660, 140)">
+    <rect x="0" y="0" width="120" height="30" rx="4" fill="#ef4444" opacity="0.08" stroke="#ef4444" stroke-width="0.8" opacity="0.25"/>
+    <text x="60" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle" font-weight="600" opacity="0.7">UNSUBSCRIBE</text>
+    <text x="60" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">immutable record</text>
+  </g>
+
+  <!-- Dashed lines from express and implied down to unsubscribe -->
+  <line x1="593" y1="118" x2="690" y2="140" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.3"/>
+  <line x1="763" y1="118" x2="750" y2="140" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.3"/>
+
+  <!-- Compliant footer icon (bottom right) -->
+  <g transform="translate(1050, 140)">
+    <rect x="0" y="0" width="100" height="30" rx="4" fill="#34d399" opacity="0.08" stroke="#34d399" stroke-width="0.8" opacity="0.25"/>
+    <text x="50" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600" opacity="0.7">COMPLIANT</text>
+    <text x="50" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">footer + headers</text>
+  </g>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="216" width="1200" height="4" rx="0" fill="#34d399" opacity="0.3"/>
+</svg>
